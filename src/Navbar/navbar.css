@@ -15,4 +15,5 @@
 .gitCat{
     width: 70px !important;
     height: 40px !important;
+    top: -6px;
 }

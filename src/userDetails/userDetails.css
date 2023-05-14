@@ -1,0 +1,105 @@
+.center-img {
+    display: block;
+    margin: 0 auto;
+  }
+.userDataCard {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    /* gap: 20px; */
+    color: #e8e8e8;
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .userDataCard::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    z-index: -1;
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .userDataCard:hover::before {
+    height: 100%;
+  }
+  
+  .userDataCard:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  
+  .userDataCard:hover .btn {
+    color: #212121 !important;
+    background: #e8e8e8 !important;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8 !important;
+    background: transparent !important ;
+    color: #e8e8e8 !important;
+  }
+  
+  .content .btn:active {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  div span {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  

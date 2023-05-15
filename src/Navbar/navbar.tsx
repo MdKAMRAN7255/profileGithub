@@ -13,7 +13,7 @@ interface setUserName {
 
 function Navbar({ setUserName }: setUserName) {
   const [profile, setProfile] = useState<string | null>(null)
-  
+  const [searchAnimationAppear, setSearchAnimation] = useState<boolean>(false);
   const user = useContext(UserContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,12 +22,11 @@ function Navbar({ setUserName }: setUserName) {
   };
 
   const debouncedResults = React.useMemo(() => {
-    return debounce(handleChange, 2000);
+    return debounce(handleChange, 2000) ;
   }, []);
 
   useEffect(() => {
       setUserName(profile);
-      console.log(profile, "profile search")
       user.setgetData(true);
   }, [profile])
   
@@ -47,9 +46,12 @@ function Navbar({ setUserName }: setUserName) {
                   className="search-text w-100 p-3 border rounded-4"
                   type="text"
                   placeholder="Search Any user Account"
-                  onChange={debouncedResults}                />
+                  onChange={(e) => {
+                    debouncedResults(e);
+                    setSearchAnimation(true);
+                  }}                />
                 <div className="searchIcon position-absolute">
-                  {profile && user.getdata ? <div className="searchAnimation"><Lottie animationData={searchAnimation}/></div> : <img src={search} className="rounded-4" width={40} height={40}/>}
+                  {searchAnimationAppear && user.getdata ? <div className="searchAnimation"><Lottie animationData={searchAnimation}/></div> : <img src={search} className="rounded-4" width={40} height={40}/>}
                 </div>
               </div>
             </div>

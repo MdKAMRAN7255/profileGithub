@@ -20,8 +20,6 @@ function App() {
   const [userName, setUserName] = useState<string | null>(null);
   const [getdata, setGetData] = useState<boolean | null>(true);
 
-  console.log(userName, 'app');
-
   return (
     <div className="App">
       <UserContext.Provider value={{ userName, getdata, setgetData: setGetData }}>

@@ -45,7 +45,7 @@ function Navbar({ setUserName }: setUserName) {
                 <input
                   className="search-text w-100 p-3 border rounded-4"
                   type="text"
-                  placeholder="Search Any user Account"
+                  placeholder="Search by username"
                   onChange={(e) => {
                     debouncedResults(e);
                     setSearchAnimation(true);

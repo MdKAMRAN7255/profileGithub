@@ -7,7 +7,6 @@ import { UserContext } from '../App';
 import UserDetails from '../userDetails/userDetails';
 function BodyWrapper() {
     const user = useContext(UserContext);
-    {console.log(user.userName)}
     return ( 
         <>
             <div className='container text-light pt-5 pt-lg-5'>

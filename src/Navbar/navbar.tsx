@@ -27,7 +27,9 @@ function Navbar({ setUserName }: setUserName) {
 
   useEffect(() => {
       setUserName(profile);
-      user.setgetData(true);
+      if(!profile){
+        user.setgetData(false)
+      }   
   }, [profile])
   
   return (
@@ -49,6 +51,7 @@ function Navbar({ setUserName }: setUserName) {
                   onChange={(e) => {
                     debouncedResults(e);
                     setSearchAnimation(true);
+                    user.setgetData(true)
                   }}                />
                 <div className="searchIcon position-absolute">
                   {searchAnimationAppear && user.getdata ? <div className="searchAnimation"><Lottie animationData={searchAnimation}/></div> : <img src={search} className="rounded-4" width={40} height={40}/>}
